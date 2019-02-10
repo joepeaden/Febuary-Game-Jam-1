@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4249286051159261206}
   - component: {fileID: 3391796310507379457}
-  - component: {fileID: 676914959828536840}
   - component: {fileID: 883461185825365938}
   - component: {fileID: 2793648042641848510}
+  - component: {fileID: 1575865085845974896}
   m_Layer: 0
-  m_Name: 1x2 Room
+  m_Name: 2x3 Room (Encounter)
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2520389317919171721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ec4173e5ee282a54a8748d668cfbfbdf, type: 3}
-  m_Color: {r: 0, g: 0.50964886, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.09163618, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -82,20 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &676914959828536840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2520389317919171721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63292cfd0fd149409f60f90eb863f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: {fileID: 0}
-  adjacentRooms: []
 --- !u!50 &883461185825365938
 Rigidbody2D:
   serializedVersion: 4
@@ -143,3 +129,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1575865085845974896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520389317919171721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72d5eb176889fd4eae1bed859d8c835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 0}
+  adjacentRooms: []

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 883461185825365938}
   - component: {fileID: 2793648042641848510}
   m_Layer: 0
-  m_Name: 1x2 Room
-  m_TagString: Room
+  m_Name: 1x2 Room (Entrance)
+  m_TagString: StartRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ec4173e5ee282a54a8748d668cfbfbdf, type: 3}
-  m_Color: {r: 0, g: 0.50964886, b: 0.764151, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.20307446, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
