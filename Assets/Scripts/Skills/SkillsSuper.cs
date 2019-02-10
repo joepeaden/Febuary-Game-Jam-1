@@ -8,5 +8,6 @@ public abstract class SkillsSuper : MonoBehaviour
     public string description;
     public float energyCost;
 
-    public abstract void SkillAction();
+    public abstract void SkillAction(GameObject target);
+    //public abstract bool ViableAction(GameObject activePlayer, GameObject target)
 }

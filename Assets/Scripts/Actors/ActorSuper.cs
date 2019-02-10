@@ -14,8 +14,17 @@ public abstract class ActorSuper : MonoBehaviour
 
     public SkillsSuper[] skills;
 
+    private CombatManager cm;
+
+    private void Start()
+    {
+        cm = FindObjectOfType<CombatManager>();
+    }
+
     public void TakeDamage(float damage)
     {
+        Debug.Log(damage);
+
         health -= damage;
 
         if (health <= 0)
@@ -55,5 +64,13 @@ public abstract class ActorSuper : MonoBehaviour
     {
         Debug.Log("Player has died!");
         Destroy(gameObject);
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            cm.SetTarget(gameObject);
+        }
     }
 }
