@@ -7,6 +7,8 @@ public class Room : MonoBehaviour
     private bool explored;
     private SpriteRenderer roomRenderer;
 
+    public int x = 1;
+
     public Level level;
     public List<Room> adjacentRooms;
 
@@ -50,7 +52,7 @@ public class Room : MonoBehaviour
                 r.roomRenderer.enabled = true;
     }
 
-    public void SetExplored(bool isExplored)
+    virtual public void SetExplored(bool isExplored)
     {
         explored = isExplored;
 
@@ -68,5 +70,10 @@ public class Room : MonoBehaviour
     public bool IsExplored()
     {
         return explored;
+    }
+
+    public bool IsVisible()
+    {
+        return roomRenderer.isVisible;
     }
 }
