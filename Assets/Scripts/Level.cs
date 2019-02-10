@@ -8,8 +8,12 @@ public class Level : MonoBehaviour
     public Room currentRoom;
     public GameObject playerParty;
 
+    public GameManager gm;
+
     void Start()
     {
+        gm = GameManager.instance;
+
         // each room should be child of level object, so can
         // get them directly from that
         rooms = new List<Room>();
@@ -46,6 +50,11 @@ public class Level : MonoBehaviour
             if(!room.IsExplored())
                 room.SetExplored(true);
         }
+    }
+
+    public void ExitGame()
+    {
+        gm.ExitGame();
     }
 
 }

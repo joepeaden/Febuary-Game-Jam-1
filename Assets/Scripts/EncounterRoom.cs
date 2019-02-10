@@ -6,7 +6,8 @@ public class EncounterRoom : Room
 {
     override public void SetExplored(bool isExplored)
     {
-        GenerateEncounter();
+        if(isExplored)
+            GenerateEncounter();
         base.SetExplored(isExplored);
     }
 

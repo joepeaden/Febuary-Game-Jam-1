@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StartRoom
   - Room
+  - ExitButton
   layers:
   - Default
   - TransparentFX
