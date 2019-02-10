@@ -116,6 +116,16 @@ public class CombatManager : MonoBehaviour
     // All combat decisions for the enemy to attack the player
     private void EnemyAction()
     {
-        activePlayer.GetComponent<ActorSuper>().skills[0].SkillAction(gm.party[0]);
+        ActorSuper actor = activePlayer.GetComponent<ActorSuper>();
+
+        //select action to take
+        SkillsSuper skill = AI.SelectSkill(actor);
+
+        // select target for enemy
+        GameObject enemy_target = AI.FindTarget(skill, gm.party, enemies);
+        
+        // skill will be null
+        if(skill != null)
+            skill.SkillAction(enemy_target);
     }
 }
