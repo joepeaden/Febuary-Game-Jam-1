@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HealPartyMember : SkillsSuper
 {
+    private float damage = 0f;
+
     void Awake()
     {
         skillName = "Heal Party Member";

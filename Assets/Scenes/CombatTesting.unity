@@ -309,8 +309,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2002351463}
-        m_MethodName: testClone2
+      - m_Target: {fileID: 157148167}
+        m_MethodName: callme
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

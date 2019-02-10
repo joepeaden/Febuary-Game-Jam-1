@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicRanged : SkillsSuper
 {
+    private float damage = 25f;
+
     void Awake()
     {
         skillName = "Ranged Attack";
