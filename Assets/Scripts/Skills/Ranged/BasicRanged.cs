@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicRanged : SkillsSuper
 {
+    private float damage = 25f;
+
     void Awake()
     {
         skillName = "Ranged Attack";
@@ -12,7 +14,7 @@ public class BasicRanged : SkillsSuper
     }
 
     override
-    public void SkillAction()
+    public void SkillAction(GameObject target)
     {
         Debug.Log("Select enemy to attack with a ranged attack!");
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HealPartyMember : SkillsSuper
 {
+    private float damage = 0f;
+
     void Awake()
     {
         skillName = "Heal Party Member";
@@ -12,7 +14,7 @@ public class HealPartyMember : SkillsSuper
     }
 
     override
-    public void SkillAction()
+    public void SkillAction(GameObject target)
     {
         Debug.Log("Select a teammate to heal!");
 
