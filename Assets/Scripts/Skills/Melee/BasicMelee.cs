@@ -12,9 +12,11 @@ public class BasicMelee : SkillsSuper
     }
 
     override
-    public void SkillAction()
+    public void SkillAction(GameObject target)
     {
         Debug.Log("Select enemy to attack with melee!");
+
+        target.GetComponent<ActorSuper>().TakeDamage(30f);
 
         // Wait for enemy selection
 

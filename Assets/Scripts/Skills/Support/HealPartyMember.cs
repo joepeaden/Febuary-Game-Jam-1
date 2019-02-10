@@ -12,7 +12,7 @@ public class HealPartyMember : SkillsSuper
     }
 
     override
-    public void SkillAction()
+    public void SkillAction(GameObject target)
     {
         Debug.Log("Select a teammate to heal!");
 

@@ -12,7 +12,7 @@ public class BasicRanged : SkillsSuper
     }
 
     override
-    public void SkillAction()
+    public void SkillAction(GameObject target)
     {
         Debug.Log("Select enemy to attack with a ranged attack!");
 

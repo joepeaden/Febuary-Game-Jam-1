@@ -53,7 +53,7 @@ public class CombatManager : MonoBehaviour
     {
         skillSelect.SetActive(false);
 
-        activePlayer.GetComponent<ActorSuper>().skills[skillNum].SkillAction();
+        activePlayer.GetComponent<ActorSuper>().skills[skillNum].SkillAction(enemies[0]);
 
         NextPlayer();
     }
@@ -64,7 +64,7 @@ public class CombatManager : MonoBehaviour
         activePlayer = queue.Dequeue();
         Debug.Log(activePlayer.GetComponent<ActorSuper>().charName + "'s turn.");
 
-        while (activePlayer.CompareTag("Enemy"))
+        while(activePlayer.CompareTag("Enemy"))
         {
             EnemyAction();
 
@@ -78,6 +78,16 @@ public class CombatManager : MonoBehaviour
 
     private void EnemyAction()
     {
-        activePlayer.GetComponent<ActorSuper>().skills[0].SkillAction();
+        ActorSuper actor = activePlayer.GetComponent<ActorSuper>();
+
+        //select action to take
+        SkillsSuper skill = AI.SelectSkill(actor);
+
+        // select target for enemy
+        GameObject enemy_target = AI.FindTarget(skill, gm.party, enemies);
+        
+        // skill will be null
+        if(skill != null)
+            skill.SkillAction(enemy_target);
     }
 }

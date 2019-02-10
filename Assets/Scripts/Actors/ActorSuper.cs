@@ -18,6 +18,8 @@ public abstract class ActorSuper : MonoBehaviour
     {
         health -= damage;
 
+        Debug.Log(charName + " has taken damage: " + health + " health remaining");
+
         if (health <= 0)
             Death();
     }
@@ -53,7 +55,7 @@ public abstract class ActorSuper : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log("Player has died!");
+        Debug.Log(charName + " has died!");
         Destroy(gameObject);
     }
 }
