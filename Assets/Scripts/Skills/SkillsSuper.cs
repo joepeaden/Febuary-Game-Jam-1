@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class SkillsSuper : MonoBehaviour
 {
-    protected string skillName;
-    protected string description;
-    protected float energyCost;
+    public string skillName;
+    public string description;
+    public float energyCost;
 
     public abstract void SkillAction();
 }

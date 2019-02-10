@@ -4,21 +4,21 @@ using UnityEngine;
 
 public abstract class ActorSuper : MonoBehaviour
 {
-    protected string charName;
+    public string charName;
 
-    protected float maxHealth;
-    protected float health;
+    public float maxHealth;
+    public float health;
 
-    protected float maxEnergy;
-    protected float energy;
+    public float maxEnergy;
+    public float energy;
 
-    protected SkillsSuper[] skills;
+    public SkillsSuper[] skills;
 
     public void TakeDamage(float damage)
     {
         health -= damage;
 
-        if (health < 0)
+        if (health <= 0)
             Death();
     }
 
@@ -28,6 +28,11 @@ public abstract class ActorSuper : MonoBehaviour
 
         if (health > maxHealth)
             health = maxHealth;
+    }
+
+    public float GetHealth()
+    {
+        return health;
     }
 
     public void UseEnergy(float lost)
@@ -49,6 +54,6 @@ public abstract class ActorSuper : MonoBehaviour
     private void Death()
     {
         Debug.Log("Player has died!");
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private ActorSuper[] party;
+    public GameObject[] party;
 
     void Awake()
     {
-        party = new ActorSuper[1];
-        party[0] = new Healer();
+        party = new GameObject[1];
+        party[0] = Instantiate((GameObject)Resources.Load("Prefabs/Actors/Party/Healer"));
     }
 }
